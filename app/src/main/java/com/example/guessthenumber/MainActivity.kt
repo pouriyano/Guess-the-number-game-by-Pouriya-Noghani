@@ -49,7 +49,7 @@ class MainActivity : ComponentActivity() {
         var green = 195;
         var blue = 255;
         var alpha = 255;
-        var randomnum: Int = Random.nextInt(101)
+        var randomnum: Int = Random.nextInt(1,101)
         var gamestatus: String = "Try It"
         setContent {
             GuessTheNumberTheme {
@@ -87,7 +87,7 @@ class MainActivity : ComponentActivity() {
                         text = "( Guess the number between 1 and 100 )",
                         modifier = Modifier.fillMaxWidth(),
                         textAlign = TextAlign.Center,
-                        fontSize = TextUnit(17f, TextUnitType.Sp),
+                        fontSize = TextUnit(12f, TextUnitType.Sp),
                         color = Color(10, 10, 10, 87)
                     )
                     Spacer(modifier = Modifier.height(12.dp))
@@ -123,7 +123,7 @@ class MainActivity : ComponentActivity() {
                             .clip(shape = RoundedCornerShape(8.dp)),
                         textStyle = TextStyle(textAlign = TextAlign.Center)
                     )
-                    if (number.value.toIntOrNull() != null && number.value.toInt() >= 0 && number.value.toInt() <= 100) {
+                    if (number.value.toIntOrNull() != null && number.value.toInt() > 0 && number.value.toInt() <= 100) {
                         boolofbutton.value = true
                     } else {
                         boolofbutton.value = false
@@ -207,7 +207,7 @@ class MainActivity : ComponentActivity() {
                         onClick = {
                             limit.value = 5
 
-                            randomnum = Random.nextInt(101)
+                            randomnum = Random.nextInt(1,101)
                             println(randomnum)
                             boolofstate.value = true
                             listremover.value = true
