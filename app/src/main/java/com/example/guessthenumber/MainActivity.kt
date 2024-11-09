@@ -233,15 +233,12 @@ class MainActivity : ComponentActivity() {
                         fontSize = TextUnit(15f, TextUnitType.Sp), fontWeight = FontWeight.Bold
 
                     )
- // my list
+                    // my list
                     lists.forEach {
-
-
                         if (it.toInt() > randomnum && listremover.value == false) {
                             Row(modifier = Modifier.fillMaxWidth()) {
 
                                 Box(
-
                                     modifier = Modifier
                                         .fillMaxWidth()
                                         .size(50.dp)
@@ -250,12 +247,10 @@ class MainActivity : ComponentActivity() {
                                             Color(239, 108, 0, 255)
                                         ),
                                 ) {
-
                                     Text(
                                         text = "number : " + it, modifier = Modifier
                                             .padding(12.dp)
                                             .align(AbsoluteAlignment.CenterLeft),
-
                                         color = Color(
                                             247,
                                             247,
@@ -266,9 +261,7 @@ class MainActivity : ComponentActivity() {
                                     Text(
                                         text = it + ">Game number", modifier = Modifier
                                             .padding(12.dp)
-                                            .align(AbsoluteAlignment.CenterRight)
-
-                                    , color = Color(
+                                            .align(AbsoluteAlignment.CenterRight), color = Color(
                                             247,
                                             247,
                                             247,
@@ -279,9 +272,7 @@ class MainActivity : ComponentActivity() {
                             }
                         } else if (it.toInt() < randomnum && listremover.value == false) {
                             Row(modifier = Modifier.fillMaxWidth()) {
-
                                 Box(
-
                                     modifier = Modifier
                                         .fillMaxWidth()
                                         .size(50.dp)
@@ -289,8 +280,7 @@ class MainActivity : ComponentActivity() {
                                         .background(
                                             Color(22, 101, 193, 255)
                                         ),
-
-                                    ) {
+                                ) {
                                     Text(
                                         text = "number : " + it, modifier = Modifier
                                             .padding(12.dp)
@@ -304,8 +294,7 @@ class MainActivity : ComponentActivity() {
                                     Text(
                                         text = it + "<Game number", modifier = Modifier
                                             .padding(12.dp)
-                                            .align(AbsoluteAlignment.CenterRight)
-                                            , color = Color(
+                                            .align(AbsoluteAlignment.CenterRight), color = Color(
                                             247,
                                             247,
                                             247,
