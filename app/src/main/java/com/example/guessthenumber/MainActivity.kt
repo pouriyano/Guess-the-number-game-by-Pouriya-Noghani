@@ -118,7 +118,7 @@ class MainActivity : ComponentActivity() {
                             .clip(shape = RoundedCornerShape(8.dp)),
                         textStyle = TextStyle(textAlign = TextAlign.Center)
                     )
-                    if (number.value.toIntOrNull() != null && number.value.toInt() > 0) {
+                    if (number.value.toIntOrNull() != null && number.value.toInt() >= 0 && number.value.toInt() <= 100) {
                         boolofbutton.value = true
                     } else {
                         boolofbutton.value = false
@@ -251,7 +251,7 @@ class MainActivity : ComponentActivity() {
                                     Text(
                                         text = "number : " + it, modifier = Modifier
                                             .padding(4.dp)
-                                            .weight(2f), color = Color(
+                                            .weight(1.75f), color = Color(
                                             247,
                                             247,
                                             247,
@@ -260,7 +260,7 @@ class MainActivity : ComponentActivity() {
                                     )
                                     Text(
                                         text = it + ">Game number", modifier = Modifier
-                                            .weight(1f)
+                                            .weight(1.25f)
                                             .padding(4.dp), color = Color(
                                             247,
                                             247,
@@ -289,7 +289,7 @@ class MainActivity : ComponentActivity() {
                                     Text(
                                         text = "number : " + it, modifier = Modifier
                                             .padding(4.dp)
-                                            .weight(2f), color = Color(
+                                            .weight(1.75f), color = Color(
                                             247,
                                             247,
                                             247,
@@ -298,7 +298,7 @@ class MainActivity : ComponentActivity() {
                                     )
                                     Text(
                                         text = it + "<Game number", modifier = Modifier
-                                            .weight(1f)
+                                            .weight(1.25f)
                                             .padding(4.dp), color = Color(
                                             247,
                                             247,
