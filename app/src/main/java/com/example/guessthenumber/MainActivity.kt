@@ -177,6 +177,7 @@ class MainActivity : ComponentActivity() {
                                 boolofstate.value = false
                                 textofstate.value = "Reset"
                             }
+                            number.value=""
                         },
                         modifier = Modifier
                             .fillMaxWidth()
