@@ -52,7 +52,7 @@ class MainActivity : ComponentActivity() {
         var green = 195;
         var blue = 255;
         var alpha = 255;
-        var randomnum: Int = Random.nextInt(1,101)
+        var randomnum: Int = Random.nextInt(1, 101)
         var gamestatus: String = "Try It"
         setContent {
             GuessTheNumberTheme {
@@ -94,6 +94,7 @@ class MainActivity : ComponentActivity() {
                         color = Color(10, 10, 10, 87)
                     )
                     Spacer(modifier = Modifier.height(12.dp))
+// Chance counter
                     if (limit.value == 1 && gamestatus != "You WIN") {
                         textfield = "It's your last chance"
                     } else if (limit.value == 0 && gamestatus != "You WIN") {
@@ -211,7 +212,7 @@ class MainActivity : ComponentActivity() {
                         onClick = {
                             limit.value = 5
 
-                            randomnum = Random.nextInt(1,101)
+                            randomnum = Random.nextInt(1, 101)
                             println(randomnum)
                             boolofstate.value = true
                             listremover.value = true
@@ -237,7 +238,7 @@ class MainActivity : ComponentActivity() {
                         fontSize = TextUnit(15f, TextUnitType.Sp), fontWeight = FontWeight.Bold
 
                     )
-  // my list
+                    // my list
                     lists.forEach {
                         if (it.toInt() > randomnum && listremover.value == false) {
                             Row(modifier = Modifier.fillMaxWidth()) {
