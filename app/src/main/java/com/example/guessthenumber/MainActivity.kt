@@ -233,7 +233,7 @@ class MainActivity : ComponentActivity() {
                         fontSize = TextUnit(15f, TextUnitType.Sp), fontWeight = FontWeight.Bold
 
                     )
-                    // my list
+  // my list
                     lists.forEach {
                         if (it.toInt() > randomnum && listremover.value == false) {
                             Row(modifier = Modifier.fillMaxWidth()) {
