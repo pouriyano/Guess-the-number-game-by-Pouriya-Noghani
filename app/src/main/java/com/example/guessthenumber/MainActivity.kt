@@ -18,6 +18,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TextField
@@ -33,10 +34,12 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.TextUnitType
 import androidx.compose.ui.unit.dp
+import androidx.core.text.isDigitsOnly
 import com.example.guessthenumber.ui.theme.GuessTheNumberTheme
 import kotlin.random.Random
 
@@ -107,6 +110,7 @@ class MainActivity : ComponentActivity() {
                         modifier = Modifier.align(Alignment.CenterHorizontally)
                     )
                     Spacer(modifier = Modifier.height(14.dp))
+
 //Text Field
                     TextField(
                         value = number.value,
@@ -114,9 +118,9 @@ class MainActivity : ComponentActivity() {
                             focusedIndicatorColor = Color(
                                 241, 241, 241, 255
                             )
-                        ),
+                        ), keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                         onValueChange = {
-                            number.value = it
+                            if (it.length <= 3) number.value = it
                         },
                         modifier = Modifier
                             .fillMaxWidth()
